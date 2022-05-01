@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.2.0"
+    hooks:
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: debug-statements
+      - id: end-of-file-fixer
+        exclude: ^docs/.*$
+      - id: pretty-format-json
+        args:
+          - --autofix
+      - id: trailing-whitespace
+        exclude: README.md
+  - repo: https://github.com/psf/black
+    rev: "22.3.0"
+    hooks:
+      - id: black
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: "4.0.1"
+    hooks:
+      - id: flake8
+  - repo: https://github.com/timothycrosley/isort
+    rev: "5.10.1"
+    hooks:
+      - id: isort

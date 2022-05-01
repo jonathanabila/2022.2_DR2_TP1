@@ -1,0 +1,17 @@
+*.pyc
+.venv
+
+
+.env*
+!.env.default
+
+dist/
+.idea
+.vscode
+.coverage
+.testmondata
+
+**/__pycache__
+
+# Database
+d.b
